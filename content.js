@@ -8,15 +8,7 @@ function isAutomatedTweet(tweet) {
         return false;
     }
 
-    // More specific selector for the "Automated" label based on the HTML structure
-    const automatedLabels = tweet.querySelectorAll('div.css-175oi2r.r-1habvwh span.css-1jxf684');
 
-    // Check each potential label
-    for (const label of automatedLabels) {
-        if (label.textContent && label.textContent.toLowerCase().includes('automated')) {
-            return true;
-        }
-    }
 
     // Alternative method: look for the specific div structure containing the automated label
     const robotIcon = tweet.querySelector('svg[viewBox="0 0 24 24"] path[d="M.998 15V9h2v6h-2zm22 0V9h-2v6h2zM12 2c-4.418 0-8 3.58-8 8v7c0 2.76 2.239 5 5 5h6c2.761 0 5-2.24 5-5v-7c0-4.42-3.582-8-8-8zM8.998 14c-1.105 0-2-.9-2-2s.895-2 2-2 2 .9 2 2-.895 2-2 2zm6 0c-1.104 0-2-.9-2-2s.895-2 2-2 2 .9 2 2-.896 2-2 2z"]');
